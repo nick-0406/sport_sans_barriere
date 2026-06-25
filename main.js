@@ -1,4 +1,4 @@
-// js/main.js
+// https://sportsansbarriere.page.gd/
 
 document.getElementById("year").innerHTML =
 new Date().getFullYear();

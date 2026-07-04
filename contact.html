@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Sport Sans Barrières</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ═══════════════════ HEADER ═══════════════════════════════ -->
+<header>
+  <div class="top-bar">
+    <div><i class="fa-solid fa-globe"></i> FR | EN</div>
+    <div><i class="fa-solid fa-wheelchair"></i> Accessibilité</div>
+    <div><i class="fa-solid fa-envelope"></i> Contact</div>
+  </div>
+  <nav>
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo Sport Sans Barrières">
+    </div>
+    <button class="nav-toggle" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#about">À propos</a></li>
+      <li><a href="index.html#activities">Activités</a></li>
+      <li><a href="index.html#countries">Pays</a></li>
+      <li><a href="decouvrir.html">Découvrir</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="btn-volunteer">
+      <i class="fa-solid fa-heart"></i>Devenir volontaire
+    </button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ═══════════════ PAGE HERO ════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="page-eyebrow">
+        <i class="fa-solid fa-envelope-open-text"></i> Écrivez-nous
+      </span>
+      <h1>Contactez-nous</h1>
+      <p>Une question, une demande de partenariat, une info presse ?
+         Notre équipe vous répond sous 5 jours ouvrés.</p>
+    </div>
+    <nav class="breadcrumb" aria-label="Fil d'ariane">
+      <a href="index.html">Accueil</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Contact</span>
+    </nav>
+  </section>
+
+  <!-- ═══════════════ CONTACT GRID ═════════════════════════════ -->
+  <section class="contact-section">
+    <div class="contact-grid">
+
+      <!-- LEFT — infos pratiques -->
+      <div class="contact-info reveal">
+
+        <div class="contact-info-header">
+          <h2>Nous trouver</h2>
+          <p>Sport Sans Barrières est un programme régional coordonné
+             depuis Dakar, avec des relais dans chaque pays partenaire.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="info-text">
+            <h4>Siège régional</h4>
+            <p>Dakar, Sénégal<br>
+               (adresse complète à renseigner)</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="info-text">
+            <h4>Email général</h4>
+            <a href="mailto:contact@sportssansbarrieres.org">
+              contact@sportssansbarrieres.org
+            </a>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="info-text">
+            <h4>Téléphone</h4>
+            <p>+221 XX XXX XX XX<br>
+               Lun – Ven, 9h – 17h (UTC)</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon"><i class="fa-solid fa-newspaper"></i></div>
+          <div class="info-text">
+            <h4>Presse & Médias</h4>
+            <a href="mailto:presse@sportssansbarrieres.org">
+              presse@sportssansbarrieres.org
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-social">
+          <h4>Suivez-nous</h4>
+          <div class="social-row">
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" aria-label="Twitter / X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Google Map placeholder — remplacer par un vrai embed iframe -->
+        <div class="map-placeholder">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span>Carte Google Maps — à intégrer</span>
+        </div>
+
+      </div>
+
+      <!-- RIGHT — formulaire -->
+      <div class="contact-form-wrap reveal">
+
+        <h3>Envoyez-nous un message</h3>
+        <p class="form-subtitle">
+          Tous les champs marqués <span class="required-star">*</span> sont obligatoires.
+        </p>
+
+        <!-- Feedback -->
+        <div class="form-feedback success" id="contactSuccess">
+          <i class="fa-solid fa-circle-check"></i>
+          Message envoyé ! Nous vous répondrons sous 5 jours ouvrés.
+        </div>
+        <div class="form-feedback error" id="contactError">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          Une erreur est survenue. Merci de réessayer ou d'écrire directement à
+          contact@sportssansbarrieres.org.
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-prenom">
+                Prénom <span class="required-star">*</span>
+              </label>
+              <input type="text" id="c-prenom" name="prenom"
+                     placeholder="Votre prénom" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="c-nom">
+                Nom <span class="required-star">*</span>
+              </label>
+              <input type="text" id="c-nom" name="nom"
+                     placeholder="Votre nom" required autocomplete="family-name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="c-email">
+              Adresse email <span class="required-star">*</span>
+            </label>
+            <input type="email" id="c-email" name="email"
+                   placeholder="vous@example.com" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="c-objet">
+              Objet <span class="required-star">*</span>
+            </label>
+            <select id="c-objet" name="objet" required>
+              <option value="" disabled selected>Sélectionnez un objet…</option>
+              <option value="partenariat">Demande de partenariat</option>
+              <option value="benevole">Devenir bénévole / volontaire</option>
+              <option value="participation">Participer au programme</option>
+              <option value="presse">Demande presse / médias</option>
+              <option value="information">Demande d'information générale</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="c-pays">Pays</label>
+            <select id="c-pays" name="pays">
+              <option value="" disabled selected>Votre pays…</option>
+              <option>Sénégal</option>
+              <option>Bénin</option>
+              <option>Côte d'Ivoire</option>
+              <option>Togo</option>
+              <option>Autre</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="c-message">
+              Message <span class="required-star">*</span>
+            </label>
+            <textarea id="c-message" name="message"
+                      placeholder="Décrivez votre demande…"
+                      required></textarea>
+            <span class="hint">Minimum 20 caractères.</span>
+          </div>
+
+          <div class="form-group">
+            <div class="checkbox-wrap">
+              <input type="checkbox" id="c-rgpd" name="rgpd" required>
+              <label for="c-rgpd">
+                J'accepte que mes données soient utilisées pour traiter
+                ma demande, conformément à notre
+                <a href="#">politique de confidentialité</a>.
+                <span class="required-star">*</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn" id="contactSubmit">
+            <i class="fa-solid fa-paper-plane"></i>
+            Envoyer le message
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA BAS ═══════════════════════════════════ -->
+  <section class="page-cta reveal">
+    <h2>Vous souhaitez nous rejoindre ?</h2>
+    <p>Remplissez notre formulaire d'adhésion — jeune bénéficiaire,
+       volontaire ou organisation partenaire.</p>
+    <div class="cta-buttons">
+      <a href="rejoindre.html" class="volunteer-btn">
+        <i class="fa-solid fa-user-plus"></i> Nous rejoindre
+      </a>
+      <a href="decouvrir.html" class="partner-btn">
+        <i class="fa-solid fa-binoculars"></i> Découvrir le programme
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ════════════════════ FOOTER ══════════════════════════════ -->
+<footer>
+  <div class="footer-container">
+    <div>
+      <h2>Sport Sans Barrières</h2>
+      <p>Construire un héritage inclusif à travers Dakar 2026.</p>
+    </div>
+    <div>
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="decouvrir.html">Découvrir</a></li>
+        <li><a href="rejoindre.html">Nous rejoindre</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Pays partenaires</h3>
+      <p>🇸🇳 Sénégal</p>
+      <p>🇧🇯 Bénin</p>
+      <p>🇨🇮 Côte d'Ivoire</p>
+      <p>🇹🇬 Togo</p>
+    </div>
+    <div>
+      <h3>Suivez-nous</h3>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p class="copyright">© <span id="year"></span> Sport Sans Barrières</p>
+</footer>
+
+<button class="back-to-top" aria-label="Retour en haut">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

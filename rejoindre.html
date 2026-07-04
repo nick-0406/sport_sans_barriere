@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nous rejoindre — Sport Sans Barrières</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/rejoindre.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ═══════════════════ HEADER ═══════════════════════════════ -->
+<header>
+  <div class="top-bar">
+    <div><i class="fa-solid fa-globe"></i> FR | EN</div>
+    <div><i class="fa-solid fa-wheelchair"></i> Accessibilité</div>
+    <div><i class="fa-solid fa-envelope"></i> Contact</div>
+  </div>
+  <nav>
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo Sport Sans Barrières">
+    </div>
+    <button class="nav-toggle" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#about">À propos</a></li>
+      <li><a href="index.html#activities">Activités</a></li>
+      <li><a href="index.html#countries">Pays</a></li>
+      <li><a href="decouvrir.html">Découvrir</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="btn-volunteer">
+      <i class="fa-solid fa-heart"></i>Devenir volontaire
+    </button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ═══════════════ PAGE HERO ════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="page-eyebrow">
+        <i class="fa-solid fa-user-plus"></i> Rejoignez-nous
+      </span>
+      <h1>Nous rejoindre</h1>
+      <p>Que vous soyez jeune bénéficiaire, volontaire ou organisation
+         partenaire — il y a une place pour vous dans Sport Sans Barrières.</p>
+    </div>
+    <nav class="breadcrumb" aria-label="Fil d'ariane">
+      <a href="index.html">Accueil</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Nous rejoindre</span>
+    </nav>
+  </section>
+
+  <!-- ═══════════════ FORMULAIRE MULTI-ÉTAPES ══════════════════ -->
+  <section class="rejoindre-section">
+
+    <!-- Indicateur d'étapes -->
+    <div class="step-indicator" id="stepIndicator">
+      <div class="step-dot active" id="dot-1">
+        <div class="dot">1</div>
+        <span>Mon profil</span>
+      </div>
+      <div class="step-line" id="line-1"></div>
+      <div class="step-dot" id="dot-2">
+        <div class="dot">2</div>
+        <span>Mes informations</span>
+      </div>
+      <div class="step-line" id="line-2"></div>
+      <div class="step-dot" id="dot-3">
+        <div class="dot">3</div>
+        <span>Confirmation</span>
+      </div>
+    </div>
+
+    <!-- ── ÉTAPE 1 : Choix du profil ──────────────────────── -->
+    <div class="form-step active" id="step1">
+
+      <div class="profile-picker">
+        <h2>Qui êtes-vous ?</h2>
+        <p>Choisissez votre profil pour afficher uniquement les champs
+           qui vous concernent.</p>
+
+        <div class="profile-grid">
+
+          <div class="profile-card p-beneficiaire" data-profile="beneficiaire">
+            <i class="fa-solid fa-person-running"></i>
+            <h3>Jeune bénéficiaire</h3>
+            <p>Je suis un jeune de 14–30 ans en situation de handicap
+               souhaitant participer au programme.</p>
+          </div>
+
+          <div class="profile-card p-volontaire" data-profile="volontaire">
+            <i class="fa-solid fa-hands-helping"></i>
+            <h3>Volontaire</h3>
+            <p>Je souhaite m'engager comme encadrant, animateur ou
+               coordinateur local.</p>
+          </div>
+
+          <div class="profile-card p-organisation" data-profile="organisation">
+            <i class="fa-solid fa-building-ngo"></i>
+            <h3>Organisation partenaire</h3>
+            <p>Mon organisation (association, fédération, institution)
+               souhaite rejoindre le réseau.</p>
+          </div>
+
+          <div class="profile-card p-presse" data-profile="presse">
+            <i class="fa-solid fa-camera"></i>
+            <h3>Presse & Médias</h3>
+            <p>Je suis journaliste ou communicant et souhaite couvrir
+               le programme.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── ÉTAPE 2a : Formulaire BÉNÉFICIAIRE ─────────────── -->
+    <div class="form-step" id="step2-beneficiaire">
+      <h2>Votre candidature</h2>
+      <p>En tant que jeune bénéficiaire — toutes les informations
+         restent strictement confidentielles.</p>
+
+      <div class="form-fields">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="b-prenom">Prénom <span class="required-star">*</span></label>
+            <input type="text" id="b-prenom" name="prenom"
+                   placeholder="Votre prénom" required>
+          </div>
+          <div class="form-group">
+            <label for="b-nom">Nom <span class="required-star">*</span></label>
+            <input type="text" id="b-nom" name="nom"
+                   placeholder="Votre nom" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="b-age">Âge <span class="required-star">*</span></label>
+            <input type="number" id="b-age" name="age"
+                   min="14" max="30" placeholder="14 – 30 ans" required>
+          </div>
+          <div class="form-group">
+            <label for="b-pays">Pays <span class="required-star">*</span></label>
+            <select id="b-pays" name="pays" required>
+              <option value="" disabled selected>Sélectionner…</option>
+              <option>Sénégal</option>
+              <option>Bénin</option>
+              <option>Côte d'Ivoire</option>
+              <option>Togo</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="b-email">Email <span class="required-star">*</span></label>
+          <input type="email" id="b-email" name="email"
+                 placeholder="vous@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="b-tel">Téléphone</label>
+          <input type="tel" id="b-tel" name="tel"
+                 placeholder="+221 XX XXX XX XX">
+        </div>
+
+        <div class="form-group">
+          <label>Type de handicap
+            <span class="hint">(facultatif — pour adapter les activités)</span>
+          </label>
+          <div class="radio-group">
+            <input type="radio" id="h-moteur" name="handicap" value="moteur">
+            <label for="h-moteur">Moteur</label>
+
+            <input type="radio" id="h-visuel" name="handicap" value="visuel">
+            <label for="h-visuel">Visuel</label>
+
+            <input type="radio" id="h-auditif" name="handicap" value="auditif">
+            <label for="h-auditif">Auditif</label>
+
+            <input type="radio" id="h-intellectuel" name="handicap" value="intellectuel">
+            <label for="h-intellectuel">Intellectuel</label>
+
+            <input type="radio" id="h-autre" name="handicap" value="autre">
+            <label for="h-autre">Autre</label>
+
+            <input type="radio" id="h-np" name="handicap" value="np">
+            <label for="h-np">Préfère ne pas préciser</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="b-sport">Sports / activités qui vous intéressent</label>
+          <input type="text" id="b-sport" name="sport"
+                 placeholder="Ex : para-athlétisme, boccia, natation…">
+        </div>
+
+        <div class="form-group">
+          <label for="b-motivation">Pourquoi souhaitez-vous rejoindre le programme ?</label>
+          <textarea id="b-motivation" name="motivation"
+                    placeholder="Quelques lignes suffisent…"></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-wrap">
+            <input type="checkbox" id="b-rgpd" required>
+            <label for="b-rgpd">
+              J'accepte que mes données soient utilisées dans le cadre
+              de ma candidature, conformément à notre
+              <a href="#">politique de confidentialité</a>.
+              <span class="required-star">*</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-nav">
+        <button class="btn-back" onclick="goToStep(1)">
+          <i class="fa-solid fa-arrow-left"></i> Retour
+        </button>
+        <button class="btn-next" onclick="submitForm('beneficiaire')">
+          Envoyer ma candidature
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- ── ÉTAPE 2b : Formulaire VOLONTAIRE ───────────────── -->
+    <div class="form-step" id="step2-volontaire">
+      <h2>Devenir volontaire</h2>
+      <p>Partagez vos compétences et votre temps pour l'inclusion sportive
+         en Afrique de l'Ouest.</p>
+
+      <div class="form-fields">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="v-prenom">Prénom <span class="required-star">*</span></label>
+            <input type="text" id="v-prenom" placeholder="Votre prénom" required>
+          </div>
+          <div class="form-group">
+            <label for="v-nom">Nom <span class="required-star">*</span></label>
+            <input type="text" id="v-nom" placeholder="Votre nom" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="v-email">Email <span class="required-star">*</span></label>
+            <input type="email" id="v-email" placeholder="vous@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="v-pays">Pays <span class="required-star">*</span></label>
+            <select id="v-pays" required>
+              <option value="" disabled selected>Sélectionner…</option>
+              <option>Sénégal</option>
+              <option>Bénin</option>
+              <option>Côte d'Ivoire</option>
+              <option>Togo</option>
+              <option>Autre</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="v-competences">Compétences principales <span class="required-star">*</span></label>
+          <input type="text" id="v-competences"
+                 placeholder="Ex : animation sportive, communication, logistique…" required>
+        </div>
+
+        <div class="form-group">
+          <label for="v-dispo">Disponibilité</label>
+          <select id="v-dispo">
+            <option value="" disabled selected>Votre disponibilité…</option>
+            <option>Week-ends uniquement</option>
+            <option>Quelques heures par semaine</option>
+            <option>Temps plein (mission)</option>
+            <option>Ponctuellement sur événements</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="v-motivation">Motivation</label>
+          <textarea id="v-motivation"
+                    placeholder="Pourquoi souhaitez-vous vous engager ?"></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-wrap">
+            <input type="checkbox" id="v-rgpd" required>
+            <label for="v-rgpd">
+              J'accepte que mes données soient utilisées dans le cadre
+              de ma candidature.
+              <span class="required-star">*</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-nav">
+        <button class="btn-back" onclick="goToStep(1)">
+          <i class="fa-solid fa-arrow-left"></i> Retour
+        </button>
+        <button class="btn-next" onclick="submitForm('volontaire')">
+          Envoyer ma candidature
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- ── ÉTAPE 2c : Formulaire ORGANISATION ─────────────── -->
+    <div class="form-step" id="step2-organisation">
+      <h2>Rejoindre en tant qu'organisation</h2>
+      <p>Fédérations sportives, associations, institutions —
+         construisons l'inclusion ensemble.</p>
+
+      <div class="form-fields">
+
+        <div class="form-group">
+          <label for="o-nom">Nom de l'organisation <span class="required-star">*</span></label>
+          <input type="text" id="o-nom" placeholder="Nom officiel" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="o-contact">Nom du contact <span class="required-star">*</span></label>
+            <input type="text" id="o-contact" placeholder="Prénom Nom" required>
+          </div>
+          <div class="form-group">
+            <label for="o-poste">Poste occupé</label>
+            <input type="text" id="o-poste" placeholder="Ex : Directeur général">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="o-email">Email <span class="required-star">*</span></label>
+            <input type="email" id="o-email" placeholder="contact@organisation.org" required>
+          </div>
+          <div class="form-group">
+            <label for="o-pays">Pays <span class="required-star">*</span></label>
+            <select id="o-pays" required>
+              <option value="" disabled selected>Sélectionner…</option>
+              <option>Sénégal</option>
+              <option>Bénin</option>
+              <option>Côte d'Ivoire</option>
+              <option>Togo</option>
+              <option>Autre</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="o-type">Type de partenariat souhaité</label>
+          <select id="o-type">
+            <option value="" disabled selected>Sélectionner…</option>
+            <option>Partenariat opérationnel (relais terrain)</option>
+            <option>Partenariat financier</option>
+            <option>Partenariat technique / formation</option>
+            <option>Partenariat communication</option>
+            <option>À définir ensemble</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="o-message">Présentation et intentions</label>
+          <textarea id="o-message"
+                    placeholder="Décrivez brièvement votre organisation et ce que vous souhaitez apporter au programme…"></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-wrap">
+            <input type="checkbox" id="o-rgpd" required>
+            <label for="o-rgpd">
+              J'accepte que les données transmises soient utilisées dans
+              le cadre de cette demande de partenariat.
+              <span class="required-star">*</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-nav">
+        <button class="btn-back" onclick="goToStep(1)">
+          <i class="fa-solid fa-arrow-left"></i> Retour
+        </button>
+        <button class="btn-next" onclick="submitForm('organisation')">
+          Envoyer la demande
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- ── ÉTAPE 2d : Formulaire PRESSE ───────────────────── -->
+    <div class="form-step" id="step2-presse">
+      <h2>Accréditation presse</h2>
+      <p>Journalistes, photographes, réalisateurs — couvrez
+         l'aventure Sport Sans Barrières.</p>
+
+      <div class="form-fields">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="p-prenom">Prénom <span class="required-star">*</span></label>
+            <input type="text" id="p-prenom" placeholder="Votre prénom" required>
+          </div>
+          <div class="form-group">
+            <label for="p-nom">Nom <span class="required-star">*</span></label>
+            <input type="text" id="p-nom" placeholder="Votre nom" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="p-media">Nom du média / organe de presse <span class="required-star">*</span></label>
+          <input type="text" id="p-media" placeholder="Ex : RFI, Le Monde Afrique…" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="p-email">Email professionnel <span class="required-star">*</span></label>
+            <input type="email" id="p-email" placeholder="vous@media.com" required>
+          </div>
+          <div class="form-group">
+            <label for="p-type">Type de média</label>
+            <select id="p-type">
+              <option value="" disabled selected>Sélectionner…</option>
+              <option>Presse écrite / web</option>
+              <option>Radio</option>
+              <option>Télévision</option>
+              <option>Photographie</option>
+              <option>Podcast / vidéo indépendant</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="p-sujet">Sujet envisagé</label>
+          <textarea id="p-sujet" style="min-height:100px"
+                    placeholder="Quel aspect du programme souhaitez-vous couvrir ?"></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-wrap">
+            <input type="checkbox" id="p-rgpd" required>
+            <label for="p-rgpd">
+              J'accepte que mes données soient utilisées pour traiter
+              ma demande d'accréditation.
+              <span class="required-star">*</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-nav">
+        <button class="btn-back" onclick="goToStep(1)">
+          <i class="fa-solid fa-arrow-left"></i> Retour
+        </button>
+        <button class="btn-next" onclick="submitForm('presse')">
+          Envoyer la demande
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- ── ÉCRAN DE SUCCÈS ─────────────────────────────────── -->
+    <div class="success-screen" id="successScreen">
+      <div class="success-icon">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h2>Candidature envoyée !</h2>
+      <p id="successMessage">
+        Merci pour votre intérêt. Notre équipe examinera votre demande
+        et vous contactera sous 5 jours ouvrés à l'adresse indiquée.
+      </p>
+      <a href="index.html">
+        <i class="fa-solid fa-house"></i> Retour à l'accueil
+      </a>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════ CTA BAS ══════════════════════════════════ -->
+  <section class="page-cta reveal">
+    <h2>En savoir plus sur le programme</h2>
+    <p>Consultez notre page Découvrir pour comprendre la vision,
+       la feuille de route et les documents du programme.</p>
+    <div class="cta-buttons">
+      <a href="decouvrir.html" class="volunteer-btn">
+        <i class="fa-solid fa-binoculars"></i> Découvrir
+      </a>
+      <a href="contact.html" class="partner-btn">
+        <i class="fa-solid fa-envelope"></i> Nous contacter
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ════════════════════ FOOTER ══════════════════════════════ -->
+<footer>
+  <div class="footer-container">
+    <div>
+      <h2>Sport Sans Barrières</h2>
+      <p>Construire un héritage inclusif à travers Dakar 2026.</p>
+    </div>
+    <div>
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="decouvrir.html">Découvrir</a></li>
+        <li><a href="rejoindre.html">Nous rejoindre</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Pays partenaires</h3>
+      <p>🇸🇳 Sénégal</p>
+      <p>🇧🇯 Bénin</p>
+      <p>🇨🇮 Côte d'Ivoire</p>
+      <p>🇹🇬 Togo</p>
+    </div>
+    <div>
+      <h3>Suivez-nous</h3>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p class="copyright">© <span id="year"></span> Sport Sans Barrières</p>
+</footer>
+
+<button class="back-to-top" aria-label="Retour en haut">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="js/main.js"></script>
+<script src="js/rejoindre.js"></script>
+</body>
+</html>

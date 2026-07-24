@@ -31,11 +31,16 @@
   <link rel="stylesheet" href="css/rejoindre.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/accessibility.css">
 </head>
 <body>
 
+<!-- ═══════════════════ HEADER ═══════════════════════════════ -->
 <header>
+  <div class="top-bar">
+    <div><i class="fa-solid fa-globe"></i> FR | EN</div>
+    <div><i class="fa-solid fa-wheelchair"></i> Accessibilité</div>
+    <div><i class="fa-solid fa-envelope"></i> Contact</div>
+  </div>
   <nav>
     <div class="logo">
       <img src="images/logo.png" alt="Logo Sport Sans Barrières">
@@ -45,13 +50,15 @@
     </button>
     <ul>
       <li><a href="index.html">Accueil</a></li>
-      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="index.html#about">À propos</a></li>
       <li><a href="index.html#activities">Activités</a></li>
       <li><a href="index.html#countries">Pays</a></li>
       <li><a href="decouvrir.html">Découvrir</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <a href="rejoindre.html"><button class="btn-volunteer"><i class="fa-solid fa-heart"></i>Devenir volontaire</button></a>
+    <button class="btn-volunteer">
+      <i class="fa-solid fa-heart"></i>Devenir volontaire
+    </button>
   </nav>
 </header>
 
@@ -67,7 +74,11 @@
       <p>Que vous soyez jeune bénéficiaire, volontaire ou organisation
          partenaire — il y a une place pour vous dans Sport Sans Barrières.</p>
     </div>
-
+    <nav class="breadcrumb" aria-label="Fil d'ariane">
+      <a href="index.html">Accueil</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Nous rejoindre</span>
+    </nav>
   </section>
 
   <!-- ═══════════════ FORMULAIRE MULTI-ÉTAPES ══════════════════ -->
@@ -93,35 +104,45 @@
 
     <!-- ── ÉTAPE 1 : Choix du profil ──────────────────────── -->
     <div class="form-step active" id="step1">
+
       <div class="profile-picker">
         <h2>Qui êtes-vous ?</h2>
         <p>Choisissez votre profil pour afficher uniquement les champs
            qui vous concernent.</p>
+
         <div class="profile-grid">
+
           <div class="profile-card p-beneficiaire" data-profile="beneficiaire">
             <i class="fa-solid fa-person-running"></i>
             <h3>Jeune bénéficiaire</h3>
             <p>Je suis un jeune de 14–30 ans en situation de handicap
                souhaitant participer au programme.</p>
           </div>
+
           <div class="profile-card p-volontaire" data-profile="volontaire">
             <i class="fa-solid fa-hands-helping"></i>
             <h3>Volontaire</h3>
             <p>Je souhaite m'engager comme encadrant, animateur ou
                coordinateur local.</p>
           </div>
+
           <div class="profile-card p-organisation" data-profile="organisation">
             <i class="fa-solid fa-building-ngo"></i>
             <h3>Organisation partenaire</h3>
-            <p>Mon organisation souhaite rejoindre le réseau.</p>
+            <p>Mon organisation (association, fédération, institution)
+               souhaite rejoindre le réseau.</p>
           </div>
+
           <div class="profile-card p-presse" data-profile="presse">
             <i class="fa-solid fa-camera"></i>
             <h3>Presse & Médias</h3>
-            <p>Je souhaite couvrir le programme.</p>
+            <p>Je suis journaliste ou communicant et souhaite couvrir
+               le programme.</p>
           </div>
+
         </div>
       </div>
+
     </div>
 
     <!-- ── ÉTAPE 2a : Formulaire BÉNÉFICIAIRE ─────────────── -->
@@ -218,7 +239,7 @@
             <label for="b-rgpd">
               J'accepte que mes données soient utilisées dans le cadre
               de ma candidature, conformément à notre
-              politique de confidentialité
+              <a href="#">politique de confidentialité</a>.
               <span class="required-star">*</span>
             </label>
           </div>
@@ -553,6 +574,5 @@
 
 <script src="js/main.js"></script>
 <script src="js/rejoindre.js"></script>
-<script src="js/accessibility.js"></script>
 </body>
 </html>

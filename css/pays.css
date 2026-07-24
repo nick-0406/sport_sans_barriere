@@ -1,0 +1,592 @@
+/* css/pays.css — styles partagés pour les 4 pages pays */
+
+/* ── HERO PAYS ──────────────────────────────────────────────── */
+
+.pays-hero{
+  min-height:70vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  color:white;
+  padding:80px 10% 60px;
+  overflow:hidden;
+}
+
+.pays-hero .overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.35);
+  pointer-events:none;
+  z-index:0;
+}
+
+.pays-hero-content{
+  position:relative;
+  z-index:1;
+  max-width:750px;
+}
+
+.pays-flag{
+  font-size:6rem;
+  margin-bottom:20px;
+  display:block;
+  filter:drop-shadow(0 4px 12px rgba(0,0,0,.3));
+}
+
+.pays-hero h1{
+  font-size:3.8rem;
+  font-weight:900;
+  margin-bottom:15px;
+  text-shadow:0 2px 12px rgba(0,0,0,.3);
+}
+
+.pays-hero p{
+  font-size:1.15rem;
+  line-height:1.8;
+  opacity:.92;
+  max-width:600px;
+  margin:0 auto 30px;
+}
+
+.pays-hero-badges{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.pays-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.35);
+  backdrop-filter:blur(8px);
+  padding:8px 18px;
+  border-radius:50px;
+  font-size:.85rem;
+  font-weight:600;
+}
+
+.pays-breadcrumb{
+  position:relative;
+  z-index:1;
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  font-size:.88rem;
+  opacity:.8;
+}
+
+.pays-breadcrumb a{
+  color:white;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.pays-breadcrumb a:hover{ color:#f39c12; }
+.pays-breadcrumb i{ font-size:.7rem; }
+
+/* Gradients par pays */
+.hero-senegal { background:linear-gradient(135deg,#00853f 0%,#1a6b3a 50%,#e31b23 100%); }
+.hero-benin   { background:linear-gradient(135deg,#008751 0%,#1a5c35 50%,#e8112d 100%); }
+.hero-ivory   { background:linear-gradient(135deg,#f77f00 0%,#cc6600 50%,#009e60 100%); }
+.hero-togo    { background:linear-gradient(135deg,#006b3f 0%,#004d2d 50%,#d21034 100%); }
+
+
+/* ── APERÇU RAPIDE (chiffres) ───────────────────────────────── */
+
+.pays-quick{
+  background:white;
+  padding:60px 10%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:30px;
+  box-shadow:0 4px 20px rgba(0,0,0,.06);
+}
+
+.quick-stat{
+  text-align:center;
+  padding:20px;
+}
+
+.quick-stat i{
+  font-size:1.8rem;
+  color:#0056b3;
+  margin-bottom:10px;
+  display:block;
+}
+
+.quick-stat strong{
+  display:block;
+  font-size:2rem;
+  font-weight:800;
+  color:#0056b3;
+  margin-bottom:5px;
+}
+
+.quick-stat span{
+  font-size:.85rem;
+  color:#888;
+}
+
+
+/* ── PRÉSENTATION ───────────────────────────────────────────── */
+
+.pays-intro{
+  padding:90px 10%;
+  background:#f4f7fb;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.pays-intro-text .eyebrow{
+  display:inline-block;
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#f39c12;
+  margin-bottom:14px;
+}
+
+.pays-intro-text h2{
+  font-size:2.3rem;
+  color:#0056b3;
+  margin-bottom:20px;
+  line-height:1.25;
+}
+
+.pays-intro-text p{
+  color:#555;
+  line-height:1.9;
+  margin-bottom:16px;
+}
+
+.pays-intro-image{
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,.12);
+  height:380px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.pays-intro-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.pays-intro-image.placeholder{
+  background:linear-gradient(135deg,#e8f0fc,#d0e3f7);
+  flex-direction:column;
+  color:#0056b3;
+  gap:12px;
+  font-size:.9rem;
+  font-weight:600;
+}
+
+.pays-intro-image.placeholder i{
+  font-size:3rem;
+  opacity:.5;
+}
+
+
+/* ── ACTIVITÉS LOCALES ──────────────────────────────────────── */
+
+.pays-activities{
+  padding:90px 10%;
+  background:white;
+}
+
+.pays-activities h2{
+  text-align:center;
+  font-size:2.3rem;
+  color:#0056b3;
+  margin-bottom:12px;
+}
+
+.pays-activities > p{
+  text-align:center;
+  color:#666;
+  margin-bottom:55px;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.activities-local-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.activity-local-card{
+  padding:35px 28px;
+  border-radius:18px;
+  background:#f8f9fa;
+  border-top:4px solid #0056b3;
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+
+.activity-local-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 14px 32px rgba(0,0,0,.1);
+}
+
+.activity-local-card i{
+  font-size:2rem;
+  color:#0056b3;
+  margin-bottom:16px;
+  display:block;
+}
+
+.activity-local-card h3{
+  font-size:1rem;
+  color:#0056b3;
+  margin-bottom:10px;
+}
+
+.activity-local-card p{
+  font-size:.88rem;
+  color:#666;
+  line-height:1.7;
+}
+
+.activity-local-card .activity-status{
+  display:inline-block;
+  margin-top:14px;
+  padding:4px 12px;
+  border-radius:50px;
+  font-size:.75rem;
+  font-weight:700;
+}
+
+.status-done    { background:#d4edda; color:#155724; }
+.status-active  { background:#fff3cd; color:#856404; }
+.status-upcoming{ background:#e2eaf5; color:#0056b3; }
+
+
+/* ── CALENDRIER ─────────────────────────────────────────────── */
+
+.pays-calendar{
+  padding:90px 10%;
+  background:#f4f7fb;
+}
+
+.pays-calendar h2{
+  text-align:center;
+  font-size:2.3rem;
+  color:#0056b3;
+  margin-bottom:55px;
+}
+
+.calendar-list{
+  max-width:750px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.calendar-item{
+  background:white;
+  border-radius:16px;
+  padding:24px 28px;
+  display:grid;
+  grid-template-columns:90px 1fr auto;
+  gap:20px;
+  align-items:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.06);
+  transition:transform .3s ease;
+}
+
+.calendar-item:hover{
+  transform:translateX(6px);
+}
+
+.cal-date{
+  text-align:center;
+  background:#e8f0fc;
+  border-radius:12px;
+  padding:12px 8px;
+}
+
+.cal-date .cal-month{
+  display:block;
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#0056b3;
+}
+
+.cal-date .cal-day{
+  display:block;
+  font-size:1.8rem;
+  font-weight:900;
+  color:#0056b3;
+  line-height:1;
+}
+
+.cal-info h4{
+  font-size:.95rem;
+  color:#1a2a3a;
+  margin-bottom:4px;
+}
+
+.cal-info p{
+  font-size:.83rem;
+  color:#888;
+}
+
+.cal-badge{
+  padding:5px 14px;
+  border-radius:50px;
+  font-size:.75rem;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+
+/* ── COORDINATEUR ───────────────────────────────────────────── */
+
+.pays-coordinator{
+  padding:90px 10%;
+  background:white;
+}
+
+.pays-coordinator h2{
+  text-align:center;
+  font-size:2.3rem;
+  color:#0056b3;
+  margin-bottom:55px;
+}
+
+.coordinator-card{
+  max-width:700px;
+  margin:0 auto;
+  background:linear-gradient(135deg,#0056b3,#0072d2);
+  color:white;
+  border-radius:24px;
+  padding:50px;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.coord-avatar{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  background:rgba(255,255,255,.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2.5rem;
+  font-weight:800;
+  border:4px solid rgba(255,255,255,.4);
+  flex-shrink:0;
+}
+
+.coord-info h3{
+  font-size:1.4rem;
+  margin-bottom:5px;
+}
+
+.coord-info .coord-role{
+  font-size:.9rem;
+  opacity:.8;
+  margin-bottom:15px;
+  display:block;
+}
+
+.coord-info p{
+  font-size:.9rem;
+  line-height:1.7;
+  opacity:.9;
+  margin-bottom:20px;
+}
+
+.coord-contact{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.coord-contact a{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.3);
+  color:white;
+  padding:8px 16px;
+  border-radius:50px;
+  font-size:.82rem;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.coord-contact a:hover{
+  background:rgba(255,255,255,.3);
+}
+
+
+/* ── TÉMOIGNAGE LOCAL ───────────────────────────────────────── */
+
+.pays-story{
+  padding:90px 10%;
+  background:#f4f7fb;
+  text-align:center;
+}
+
+.pays-story h2{
+  font-size:2.3rem;
+  color:#0056b3;
+  margin-bottom:50px;
+}
+
+.story-card-local{
+  max-width:700px;
+  margin:0 auto;
+  background:white;
+  border-radius:24px;
+  padding:50px;
+  box-shadow:0 10px 30px rgba(0,0,0,.09);
+}
+
+.story-avatar{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#0056b3,#28a745);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2rem;
+  color:white;
+  font-weight:700;
+  margin:0 auto 22px;
+  border:4px solid #f39c12;
+}
+
+.story-card-local h3{
+  font-size:1.1rem;
+  color:#28a745;
+  margin-bottom:6px;
+}
+
+.story-card-local .story-tag{
+  font-size:.82rem;
+  color:#f39c12;
+  font-weight:700;
+  margin-bottom:20px;
+  display:block;
+}
+
+.story-card-local p{
+  font-size:1rem;
+  color:#555;
+  line-height:1.8;
+  font-style:italic;
+}
+
+
+/* ── NAVIGATION ENTRE PAYS ──────────────────────────────────── */
+
+.pays-nav{
+  padding:60px 10%;
+  background:#021b3a;
+  color:white;
+}
+
+.pays-nav h3{
+  text-align:center;
+  font-size:1.1rem;
+  opacity:.7;
+  margin-bottom:30px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.pays-nav-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  max-width:800px;
+  margin:0 auto;
+}
+
+.pays-nav-link{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  padding:20px 14px;
+  border-radius:16px;
+  background:rgba(255,255,255,.07);
+  text-decoration:none;
+  color:white;
+  font-weight:700;
+  font-size:.88rem;
+  transition:.3s;
+  border:2px solid transparent;
+  text-align:center;
+}
+
+.pays-nav-link:hover{
+  background:rgba(255,255,255,.15);
+  border-color:rgba(255,255,255,.3);
+  transform:translateY(-4px);
+}
+
+.pays-nav-link.current{
+  border-color:#f39c12;
+  background:rgba(243,156,18,.12);
+  color:#f39c12;
+  cursor:default;
+  pointer-events:none;
+}
+
+.pays-nav-link .flag-big{ font-size:2rem; }
+
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+
+@media(max-width:900px){
+  .pays-intro{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+  .coordinator-card{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .coord-avatar{ margin:0 auto; }
+  .coord-contact{ justify-content:center; }
+}
+
+@media(max-width:650px){
+  .pays-hero h1{ font-size:2.6rem; }
+  .pays-nav-grid{ grid-template-columns:1fr 1fr; }
+  .calendar-item{ grid-template-columns:70px 1fr; }
+  .cal-badge{ display:none; }
+  .coordinator-card{ padding:32px 24px; }
+}
+
+@media(max-width:420px){
+  .pays-flag{ font-size:4rem; }
+  .pays-hero h1{ font-size:2rem; }
+}

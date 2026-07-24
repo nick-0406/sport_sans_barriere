@@ -1,0 +1,13 @@
+# robots.txt — Sport Sans Barrières
+# Ce fichier indique aux moteurs de recherche ce qu'ils peuvent explorer.
+# Remplacer "www.sportssansbarrieres.org" par votre vrai domaine.
+
+User-agent: *
+Allow: /
+
+# Ne pas indexer les fichiers JS/CSS (inutile pour le référencement)
+Disallow: /js/
+Disallow: /css/
+
+# Emplacement du sitemap (aide Google à tout trouver rapidement)
+Sitemap: https://www.sportssansbarrieres.org/sitemap.xml

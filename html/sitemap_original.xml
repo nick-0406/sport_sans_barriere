@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  sitemap.xml — Sport Sans Barrières
+  À soumettre sur Google Search Console : https://search.google.com/search-console
+  Mettre à jour la balise <lastmod> à chaque modification significative d'une page.
+  Remplacer "www.sportssansbarrieres.org" par votre vrai domaine.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Page d'accueil — priorité maximale -->
+  <url>
+    <loc>https://www.sportssansbarrieres.org/</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- À propos -->
+  <url>
+    <loc>https://www.sportssansbarrieres.org/a-propos.html</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Découvrir -->
+  <url>
+    <loc>https://www.sportssansbarrieres.org/decouvrir.html</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Nous rejoindre -->
+  <url>
+    <loc>https://www.sportssansbarrieres.org/rejoindre.html</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://www.sportssansbarrieres.org/contact.html</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
